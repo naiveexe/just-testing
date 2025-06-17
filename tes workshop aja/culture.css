@@ -1,0 +1,247 @@
+
+body {
+    background-color: #f9f9f9;
+    background-size: cover; 
+    background-position: center; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Berlin Sans FB', sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #004d99; 
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky; /* Menempel di atas saat di-scroll */
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    font-family: Laurasia;
+    letter-spacing: 2px;
+  
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    flex-grow: 1; /* Agar menu fleksibel dan mengisi ruang */
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white; 
+    font-size: 23px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00; 
+}
+
+
+.logout-container {
+    margin-left: auto; 
+}
+
+.logout {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    letter-spacing: 2px;
+}
+
+.logout:hover {
+    background-color: #ff6666;
+}
+
+.logo-container {
+    margin-right: 20px; /* Memberikan sedikit jarak antara logo dan menu */
+}
+
+.logo {
+    width: 50px; 
+    height: auto;
+    display: block;
+}
+
+
+.hero-image-container {
+    position: relative; /* untuk teks di atas gambar */
+    width: 100%; 
+    height: 70vh; 
+    overflow: hidden;
+}
+
+.hero-image-container img {
+    width: 100%; 
+    height: auto; 
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    font-weight: bold;
+    text-shadow: 10px 10px 10px rgba(0.15, 0, 0, 0.15); 
+    text-align: center;
+    font-family: baby bumi;
+    font-size: 80px;
+    letter-spacing: 3px;
+
+}
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .hero-text {
+        font-size: 24px; 
+        font-family:Baby Bumi;
+    }
+}
+
+.batas {
+    background-color: #004d99; 
+    display: flex;
+    padding: 35px 50px;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.date-time-container {
+    display: flex; /* Mengatur elemen dalam satu baris */
+    justify-content: space-between; /* Tanggal di kiri, jam di kanan */
+    align-items: center; /* Vertikal sejajar */
+    color: #000000; 
+    font-family: Hobo Std; 
+    font-size: 18px; 
+    padding: 10px 20px; 
+    margin: 20px auto; 
+    width: 95%; 
+ 
+}
+
+.date-display {
+    text-align: left; 
+    flex: 1; 
+    letter-spacing: 1x;
+}
+
+.time-display {
+    text-align: right; 
+    flex: 1; 
+    letter-spacing: 2px;
+}
+
+main {
+    border-radius: 8px; /* Membuat sudut kotak menjadi melengkung */
+    width: 80%; /* Lebar kotak utama */
+    margin: 10px auto; /* Pusatkan kotak */
+}
+
+.tempat-hits-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pusatkan isi dalam setiap kotak */
+    background-image: url(gambar/bg1.jpg);
+    background-size: cover; 
+    background-position: center; 
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding-top: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Tambahkan efek transisi */
+}
+
+.tempat-hits-item:hover {
+    transform: scale(0.9); /* Efek zoom out (mengecilkan ukuran gambar) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan sedikit bayangan saat di-hover */
+}
+
+.tempat-hits-item img {
+    width: 90%; /* Sesuaikan dengan lebar kontainer */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+.tempat-hits-item h3 {
+    font-size: 30px;
+    color: #004d99; /* Warna teks */
+    font-family: baby bumi;
+    letter-spacing: 1px;
+}
+
+.tempat-hits-item .button-link button {
+    background-color: #004d99;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.tempat-hits-item .button-link button:hover {
+    background-color: #ffcc00; /* Warna saat tombol di-hover */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    main {
+        width: 95%; /* Menyesuaikan lebar kotak untuk layar kecil */
+    }
+
+    .tempat-hits-container {
+        padding: 15px;
+    }
+
+    .tempat-hits-item {
+        padding: 10px;
+    }
+}
+
+
+.foter {
+    background-color: #004d99; 
+    color: white; 
+    text-align: center;
+    padding: 10px 0; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin: 0; 
+}
+
